@@ -1,0 +1,240 @@
+.success {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        button {
+            background: transparent;
+
+        }
+
+    }
+
+    .message {
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 20px;
+        background: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        text-align: center;
+
+        .image {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1rem 0;
+
+            p {
+                &.Successful {
+                    color: #27AE60;
+                }
+
+                &.Failed {
+                    color: #EB5757;
+                }
+
+                &.Unresolved {
+                    color: #F2C94C;
+                }
+
+            }
+
+        }
+
+        .text {
+            p {
+                margin-bottom: .3rem;
+
+                &:nth-of-type(1) {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+                &:nth-of-type(2) {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+
+                &:nth-of-type(3) {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+        }
+
+    }
+
+    .info {
+        padding: 1rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            :first-child {
+                color: #2C415C80;
+            }
+
+            :last-child {
+                color: #2C415C;
+            }
+        }
+
+    }
+
+    .buttons {
+        padding: 1rem 2.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        p {
+            font-weight: 800;
+            font-size: 16px;
+            color: #2C415C;
+            line-height: 20px;
+        }
+
+        .button_container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+
+            button {
+                padding: 1.5rem 0;
+            }
+
+            .red {
+                color: #EB5757;
+                width: 40%;
+                border: 1px solid #EB5757;
+            }
+
+            .blue {
+                width: 40%;
+                background: var(--blue);
+                color: var(--white);
+            }
+
+        }
+
+
+
+    }
+
+
+    @media (max-width: 768px) {
+        gap: .5rem;
+        padding: 1rem;
+
+        .top{
+            span {
+                font-size: 16px;
+            }
+        }
+        .message {
+            width: 100%;
+            margin: unset;
+        }
+
+        .info,
+        .buttons {
+            padding: 1rem 0;
+        }
+    }
+}
+
+
+.retry {
+    min-height: 40vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+
+    .retrying {
+        p {
+            font-size: 14px;
+        }
+
+    }
+
+    .done {
+
+        .done_top {
+            display: flex;
+            flex-direction: column;
+            color: #2C415C;
+
+
+            .button {
+                align-self: flex-end;
+
+                button {
+                    background: transparent;
+
+                }
+
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+        }
+
+        .done_info {
+            p {
+                color: #2C415C;
+                margin-bottom: .5rem;
+
+                &:nth-of-type(1) {
+                    font-size: 12px;
+                    color: #27AE60;
+                }
+
+                &:nth-of-type(2) {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+
+                &:nth-of-type(3) {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+
+
+            }
+
+        }
+    }
+
+    @media (max-width: 768px) {
+        min-height: unset;
+
+    }
+
+    }
